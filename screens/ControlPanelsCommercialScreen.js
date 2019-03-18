@@ -11,13 +11,23 @@ class ControlPanelsCommercialScreen extends Component {
         <ImageBackground source={require('../images/bg_warm_house_tintedandblurred.png')}style={styles.container}>
           <SafeAreaView style={{justifyContent: 'space-between'}}>
           <StatusBar barStyle="light-content" />
-					<Disclaimer style={{marginBottom:10}}text={APP_STRINGS.STRING_COMMERCIALPANEL_DESCRIPTION}/>
+          <Disclaimer 
+            style={{marginBottom:10}}
+            text={APP_STRINGS.STRING_COMMERCIALPANEL_DESCRIPTION}/>
 						<View style={{alignSelf: 'center', flex:5}}>
 							<UZCTable/>
 						</View>
-						<MyButton style={{marginTop: 10}} title='UZC Manual' onPress={()=>Linking.openURL('https://ewccontrols.com/acrobat/090375a0221.pdf')}/>
-            <MyButton  title='UZC Manual en Español' onPress={()=>Linking.openURL('https://ewccontrols.com/acrobat/090375a0252.pdf')}/>
-						<MyButton  title='UZC Submittal Sheet' onPress={()=>Linking.openURL('https://ewccontrols.com/acrobat/090377a0140.pdf')}/>
+            <MyButton 
+              style={{marginTop: 10}} 
+              title='UZC Manual' 
+              onPress={()=>Linking.openURL('https://ewccontrols.com/acrobat/090375a0221.pdf')}/>
+            <MyButton 
+              title='UZC Manual en Español' 
+              onPress={()=>Linking.openURL('https://ewccontrols.com/acrobat/090375a0252.pdf')}/>
+            <MyButton 
+              style={{marginBottom: 10}}
+              title='UZC Submittal Sheet' 
+              onPress={()=>Linking.openURL('https://ewccontrols.com/acrobat/090377a0140.pdf')}/>
 
           </SafeAreaView>
         </ImageBackground>

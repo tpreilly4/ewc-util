@@ -60,8 +60,7 @@ export default class ContactUsScreen extends Component {
               <PanelView title="Warranty" text="Want to make a warranty inquiry? Send our returns department an email." buttonList={contactWarrantyButtons}/>
               <PanelView title="Sales" text="Have a question about purchasing one of our products? Send our sales team an email." buttonList={contactSalesButtons}/>
               <PanelView title="Accounting" text="Have questions about your account with us? Send our accounting department an email." buttonList={contactAccountingButtons}/>
-              <PanelView title="Submit App Feedback" text="Have some feedback about our new mobile app? Send the development team an email." buttonList={contactDevButtons}/>
-
+              <PanelView title="Submit App Feedback" text="Have some feedback about our new mobile app? Send the development team an email." buttonList={contactDevButtons} style={{paddingBottom: 10}}/>
             </ScrollView>
           </SafeAreaView>
         </ImageBackground>

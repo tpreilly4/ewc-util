@@ -41,7 +41,7 @@ export default class SupplyDampersScreen extends Component {
 				col2:[
 					"24 Volt\n2 Wire\nSpring return",
 					"N/A",
-					"?",
+					"8 VA",
 					"5\" lbs.",
 					"No",
 					"No ",
@@ -117,7 +117,7 @@ export default class SupplyDampersScreen extends Component {
 				col2:[
 					"24 Volt\n2 Wire\nSpring return",
 					"N/A",
-					"?",
+					"8 VA",
 					"5\" lbs.",
 					"No",
 					"No ",
@@ -140,13 +140,11 @@ export default class SupplyDampersScreen extends Component {
 
     return (
     <ImageBackground source={require('../images/bg_warm_house_tintedandblurred.png')}style={styles.container}>
-			<KeyboardAvoidingView keyboardVerticalOffset={0} behavior="padding" enabled>
 				<SafeAreaView style={{flex: 1}}>
 					<ScrollView style={{flex: 1}}>
 						<ProductTable data={data}/>
 					</ScrollView>
 				</SafeAreaView>
-			</KeyboardAvoidingView>
 		</ImageBackground>
     )
   }

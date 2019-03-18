@@ -33,6 +33,8 @@ const APP_STRINGS = {
     STRING_EWT855_DESCRIPTION: "Rh, Rc, C, Y, Y2, W/E, W2, G, O, B",
     STRING_EWT725_DESCRIPTION: "R, C, Y, W2, W/E, G, O, B",
     STRING_EWT6012_DESCRIPTION: "Rh, Rc, C, Y, W, G, O, B",
+
+    STRING_TRANSFORMERS_DISCLAIMER: "40VA can power up to 20 URD, ND and SID dampers\nOR\nup to 5 RSD, and ND-RSD dampers.",
     
     STRING_SBD_DESCRIPTION: "The Smart Bypass Damper.\n\nNo measuring instruments are required. No weights to adjust. No springs to crank. The SBD is ACCA Manual Zr compliant. As an added benefit of the unique blade design and the smart, self-balancing feature of the SBD, there is no need to install and setup a separate bypass balancing hand damper.",
     STRING_CLBD_DESCRIPTION: "Due to the constant load applied to the damper blade and the unique magnetic latch, the CLBD Bypass Damper can be installed in any position on your bypass duct-work, to manage the HVAC system’s static pressure during zoned operations.\n\nThe CLBD minimizes bypass volume, while still preventing the HVAC system static pressure from rising above the selected Static Pressure set-point. The CLBD is a basic, cost effective Bypass Solution for Constant Speed or Variable Speed “zoned” HVAC systems.",

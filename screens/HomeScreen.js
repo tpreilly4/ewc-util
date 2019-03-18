@@ -1,13 +1,28 @@
 import React, {Component} from 'react';
 import APP_STRINGS from '../strings';
-import { StatusBar, StyleSheet, ImageBackground, SafeAreaView, ScrollView, Image, Dimensions, Linking} from 'react-native';
+import { StatusBar, StyleSheet, ImageBackground, SafeAreaView, ScrollView, Image, Dimensions, Linking, Alert } from 'react-native';
 import PanelView from '../components/PanelView';
 import Disclaimer from '../components/Disclaimer';
 
 class HomeScreen extends Component {
     render() {
 
-      const DuctDesign = '../images/LP-118.pdf'
+      const controlPanelResOrComAlert = () => {
+        Alert.alert('Before we continue...',
+        'Are you looking for a control panel for a residential or commercial system?',
+        [
+          {
+            text: 'Residential', 
+            onPress:()=>{this.props.navigation.navigate('ControlPanelsResidential')}
+          },
+          {
+            text: 'Commercial',
+            onPress:()=>{this.props.navigation.navigate('ControlPanelsCommercial')}
+          },
+        ],
+        {cancelable: false},
+        );
+      };
 
       const bpcButtons = [
         {
@@ -30,14 +45,14 @@ class HomeScreen extends Component {
       const zspButtons = [
         {
           id: 0,
-          title: "Control Panel Finder",
-          onPress:()=>{this.props.navigation.navigate('ControlPanelsResidential')},
+          title: "Control Panels",
+          onPress:()=>{controlPanelResOrComAlert()},
         },
-        {
-          id: 1,
-          title: "UZC Zoning System",
-          onPress:()=>{this.props.navigation.navigate('ControlPanelsCommercial')},
-        },
+        // {
+        //   id: 1,
+        //   title: "UZC Zoning System",
+        //   onPress:()=>{this.props.navigation.navigate('ControlPanelsCommercial')},
+        // },
         {
           id: 2,
           title:"Supply Dampers",
@@ -51,7 +66,7 @@ class HomeScreen extends Component {
         {
           id: 4,
           title:"Transformers",
-          onPress:()=>alert("Transformers coming soon!"),
+          onPress:()=>{this.props.navigation.navigate('Transformers')},
         },
         {
           id: 5,

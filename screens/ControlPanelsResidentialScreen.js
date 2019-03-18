@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
-import { View, Button, Text, ImageBackground, StyleSheet, ScrollView, SafeAreaView, KeyboardAvoidingView, Slider, Picker, Modal, Linking } from 'react-native'
+import { Text, ImageBackground, StyleSheet, ScrollView, SafeAreaView, KeyboardAvoidingView, Slider, Picker, Modal, Linking } from 'react-native'
 import PanelViewContainer from '../components/PanelViewContainer';
 import APP_STRINGS from '../strings';
 import Disclaimer from '../components/Disclaimer';
 import MyButton from '../components/MyButton';
 import productImages from '../images/index';
 import ProductOutputModal from '../components/ProductOutputModal';
-import ProductTable from '../components/ProductTable';
-
 
 class ControlPanelsResidentialScreen extends Component {
   
@@ -181,7 +179,7 @@ class ControlPanelsResidentialScreen extends Component {
               onValueChange={val => this.setState({numZones: val})}
               />
           </PanelViewContainer>
-          <MyButton bypass={this.state} style={{marginTop: 25}} title="Suggest a Control Panel" onPress={this.getControlPanel}></MyButton>
+          <MyButton bypass={this.state} style={{marginTop: 25, marginBottom:10}} title="Suggest a Control Panel" onPress={this.getControlPanel}></MyButton>
           </ScrollView>
         </SafeAreaView>
         </KeyboardAvoidingView>

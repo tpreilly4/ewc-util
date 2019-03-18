@@ -19,6 +19,7 @@ import ControlPanelsResidentialScreen from './screens/ControlPanelsResidentialSc
 import ContactUsScreen from './screens/ContactUsScreen';
 import LearnMoreScreen from './screens/LearnMoreScreen';
 import DuctDesignScreen from './screens/DuctDesignScreen';
+import TransformersScreen from './screens/TransformersScreen';
 
 const win = Dimensions.get('window');
 
@@ -105,6 +106,16 @@ const AppNavigator = createStackNavigator({
     screen: ThermostatsScreen,
     navigationOptions: () => ({
       title: `Thermostats`,
+      headerTintColor: 'white',
+      headerStyle: {
+        backgroundColor: '#0033ff',
+      },
+    }),
+  },
+  Transformers:{
+    screen: TransformersScreen,
+    navigationOptions: () => ({
+      title: `Transformers`,
       headerTintColor: 'white',
       headerStyle: {
         backgroundColor: '#0033ff',

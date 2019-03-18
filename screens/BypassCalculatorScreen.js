@@ -357,7 +357,7 @@ class BypassCalculatorScreen extends Component {
             </Picker>
           </PanelViewContainer>
 
-          <MyButton title="Calculate Bypass" onPress={this.getBypass} style={{marginTop: 25}}/>
+          <MyButton title="Calculate Bypass" onPress={this.getBypass} style={{marginTop: 25, marginBottom: 10}}/>
           </ScrollView>
         </SafeAreaView>
         </KeyboardAvoidingView>

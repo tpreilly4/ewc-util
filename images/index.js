@@ -1,7 +1,7 @@
 const productImages = {
     panels: {
         bmplus: require('./products/controlpanels/panel_bmplus.png'),
-        ncm300: require('./products/controlpanels/panel_ncm300.jpg'),
+        ncm300: require('./products/controlpanels/panel_ncm300.png'),
         uzc: require('./products/controlpanels/panel_uzc4.png'),
     },
     bypassDampers: {
@@ -23,7 +23,6 @@ const productImages = {
         ewt855i: require('./products/thermostats/tstat_ewt855i.png'),
         ewt955wh: require('./products/thermostats/tstat_ewt955wh.png'),
         ewt6012: require('./products/thermostats/tstat_ewt6012.png'),
-
     },
     transformers: {
         t40vaf: require('./products/transformers/transformer_t40vaf.png'),

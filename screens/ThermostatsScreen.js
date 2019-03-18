@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SafeAreaView, KeyboardAvoidingView, ImageBackground, ScrollView, StyleSheet, Linking} from 'react-native';
+import { SafeAreaView, ImageBackground, ScrollView, StyleSheet, Linking} from 'react-native';
 import ProductTable from '../components/ProductTable';
 import productImages from '../images/index';
 import APP_STRINGS from '../strings';
@@ -34,7 +34,7 @@ export default class SupplyDampersScreen extends Component {
 			},
 			{
 				id:"ewt855i",
-				title:"Model RSD",
+				title:"EWT-855i",
 				imgSrc: productImages.thermostats.ewt855i,
 				col1: tstatFeatureCats,
 				col2:[
@@ -120,13 +120,11 @@ export default class SupplyDampersScreen extends Component {
 
     return (
     <ImageBackground source={require('../images/bg_warm_house_tintedandblurred.png')}style={styles.container}>
-			<KeyboardAvoidingView keyboardVerticalOffset={0} behavior="padding" enabled>
 				<SafeAreaView style={{flex: 1}}>
 					<ScrollView style={{flex: 1}}>
 						<ProductTable data={data}/>
 					</ScrollView>
 				</SafeAreaView>
-			</KeyboardAvoidingView>
 		</ImageBackground>
     )
   }

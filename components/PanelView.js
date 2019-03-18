@@ -18,7 +18,7 @@ export default class PanelView extends Component {
           <Text style={styles.titleText}>{titleString}</Text>
           <Text style={styles.normalText}>{words}</Text>
         </View>
-        <View style={styles.btnContainer}>
+        <View style={[styles.btnContainer, this.props.style]}>
           { touchables }
         </View>
       </View>
