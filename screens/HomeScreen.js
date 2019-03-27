@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import APP_STRINGS from '../strings';
-import { StatusBar, StyleSheet, ImageBackground, SafeAreaView, ScrollView, Image, Dimensions, Linking, Alert } from 'react-native';
+import { StatusBar, StyleSheet, ImageBackground, SafeAreaView, ScrollView, Image, Dimensions, Linking, Alert, Platform } from 'react-native';
 import PanelView from '../components/PanelView';
 import Disclaimer from '../components/Disclaimer';
 
@@ -38,7 +38,7 @@ class HomeScreen extends Component {
         {
           id: 3,
           title:"Duct Design",
-          onPress:()=>{this.props.navigation.navigate('DuctDesign')},
+          onPress:()=>{Platform.OS === 'ios' ? this.props.navigation.navigate('DuctDesign') : alert("Duct Design Coming soon!")},
         },
       ];
 

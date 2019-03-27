@@ -1,5 +1,5 @@
 const APP_STRINGS = {
-    STRING_BPC_HOMESCREEN : 'Press \'Go\' to determine which model bypass damper we recommend for use with the system you are configuring.\n\nPress \'Learn More\' to see ACCA Manual Zr guidelines for managing excess air.\n\nPress \'Duct Design\' to read about Ultra-Zone System\'s guidelines for duct design.',
+    STRING_BPC_HOMESCREEN : 'Press \'Bypass Calculator\' to determine which model bypass damper we recommend for use with the system you are configuring.\n\nPress \'Learn More\' to see ACCA Manual Zr guidelines for managing excess air.\n\nPress \'Duct Design\' to read about Ultra-Zone System\'s guidelines for duct design.',
     STRING_ZSP_HOMESCREEN : "Browse our recommended selection of zoning products and find out which will fit your needs.",
     STRING_CONTACT_HOMESCREEN : 'Discover important contact information.',
     STRING_MANUAL_HOMESCREEN : 'See our web page to sort through our product manuals sorted alphabetically.',
@@ -11,7 +11,7 @@ const APP_STRINGS = {
     STRING_BPCSCREEN_OPENRUN:'If applicable, enter the size (CFM) of the open run.\n\nPress the info button for more information.',
     STRING_BPCSCREEN_DAMPERSHAPE:'Choose the shape for the bypass damper you need.',
     STRING_BPCSCREEN_DAMPERTYPE:'Choose the type of bypass damper you need.',
-    STRING_BPCSCREEN_DISCLAIMER:'Scroll down and fill out all applicable fields below and press \'Calculate\' at the bottom to find the bypass amper model and size that we recommend based on your input.',
+    STRING_BPCSCREEN_DISCLAIMER:'Scroll down and fill out all applicable fields below and press \'Calculate\' at the bottom to find the bypass damper model and size that we recommend based on your input.',
     STRING_BPCSCREEN_BOUNDSALERT: 'EWC does not advise bypassing the amount of airflow you entered.\n\n Please double-check your input or review additional options for managing airflow',
     STRING_BPCSCREEN_DAMPERLEAKAGEINFO: '\"Damper Leakage\" may also be known as:\n\nDistributed Relief\nBleeding\nLeakage\n\nThese terms refer to the excess airflows through zone dampers sitting on low-limit stops.',
     STRING_BPCSCREEN_OPENRUNINFO: '\"Open run\" may also be known as:\n\nOpen Zone\nWild Zone\nWild Run\nDump Zone\n\nThese terms refer to the excess airflows through a non-critical (temperature/humidity) room or space that functions as a bypass path to return air (for example: large common areas, hallways, or basements).',

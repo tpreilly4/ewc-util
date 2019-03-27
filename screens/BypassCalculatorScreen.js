@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Picker, TextInput, ImageBackground, StyleSheet, ScrollView, SafeAreaView, KeyboardAvoidingView, Alert, Modal, Linking } from 'react-native'
+import { View, Picker, TextInput, ImageBackground, StyleSheet, ScrollView, SafeAreaView, KeyboardAvoidingView, Alert, Modal, Linking, Platform } from 'react-native'
 import MyButton from '../components/MyButton';
 import PanelViewContainer from '../components/PanelViewContainer';
 import APP_STRINGS from '../strings';
@@ -269,22 +269,24 @@ class BypassCalculatorScreen extends Component {
               <ProductOutputModal product={this.state.bypassOutput} exitOnPress ={() => {this.toggleModal(!this.state.modalVisible)}}/>
           </Modal>          
           <PanelViewContainer title="System Capacity"text={APP_STRINGS.STRING_BPCSCREEN_SYSCAP}>
-          <View style={{flexDirection: 'row', justifyContent:'space-around'}}>
+          <View style={styles.inputContainerSC}>
             <TextInput
-                style={[styles.input, styles.inputSZ]}
+                style={[styles.inputTextSC, styles.textInputSC]}
                 onChangeText={(sc_input) => this.setState({sc_input})}
                 value={this.state.sc_input}
                 keyboardType='numeric'
                 placeholder='Enter System Capacity...'
                 placeholderTextColor='#0033ff'
               />
+              <View style={styles.cfmPicker}>
               <Picker
-                style={{ width: 70 }} itemStyle={{height: 120, color: '#0033ff'}}
+                style={styles.pickerSC} itemStyle={{height: 120, color: '#0033ff'}} mode = 'dropdown'
                 selectedValue={this.state.sc_units}
                 onValueChange={(itemValue) =>  this.setState({sc_units: itemValue})}>
                 <Picker.Item label="CFM" value='1' />
                 <Picker.Item label="Tons" value='400' />
               </Picker>
+              </View>
             </View>
           </PanelViewContainer>
           <PanelViewContainer title="Smallest Zone"text={APP_STRINGS.STRING_BPCSCREEN_SMALLESTZONE}>
@@ -337,21 +339,24 @@ class BypassCalculatorScreen extends Component {
                 placeholderTextColor='#0033ff'
               />
           </PanelViewContainer>
-          <PanelViewContainer title="Desired Bypass Type"text={APP_STRINGS.STRING_BPCSCREEN_OPENRUN}>
+          <PanelViewContainer title="Desired Bypass Type"text={APP_STRINGS.STRING_BPCSCREEN_DAMPERTYPE}>
+          <View style={styles.pickerWidth}>
             <Picker
-              style={{}} itemStyle={{color: '#0033ff', height:120, fontSize: 25}}
+              style={{}} itemStyle={{color: '#0033ff', height:120, fontSize: 25}} mode = 'dropdown'
               selectedValue={this.state.bypassType_input}
               onValueChange={(itemValue) => this.setState({bypassType_input: itemValue})}>
               <Picker.Item label="Electronic" value='elec' />
               <Picker.Item label="Barometric" value='baro' />
             </Picker>
+            </View>
           </PanelViewContainer>
 
-          <PanelViewContainer title="Desired Bypass Shape"text={APP_STRINGS.STRING_BPCSCREEN_OPENRUN}>
+          <PanelViewContainer title="Desired Bypass Shape"text={APP_STRINGS.STRING_BPCSCREEN_DAMPERSHAPE}>
             <Picker
-              style={{}} itemStyle={{color: '#0033ff', height:120, fontSize: 25}}
+              style={styles.pickerWidth} itemStyle={{color: '#0033ff', height:120, fontSize: 25}}
               selectedValue={this.state.shape_input}
-              onValueChange={(itemValue) => this.setState({shape_input: itemValue})}>
+              onValueChange={(itemValue) => this.setState({shape_input: itemValue})}
+              mode='dropdown'>
               <Picker.Item label="Round" value='round' />
               <Picker.Item label="Rectangular" value='rect' />
             </Picker>
@@ -383,15 +388,86 @@ const styles = StyleSheet.create({
     marginStart:10,
     marginLeft:10,
   },
+
   input : {
-    height: 60, 
+      textAlign: 'center',
+      color: '#0033ff',
+      fontSize: 30,
+  },
+
+  inputContainerSC : {
+    ...Platform.select({
+      ios: {
+        flexDirection: 'row',
+      },
+      android: {
+        flexDirection: 'row',
+        height: 100,
+        paddingBottom:10,
+        justifyContent: 'space-between'
+      }
+    }),
+  },
+
+  inputTextSC : {
     textAlign: 'center',
     color: '#0033ff',
-    fontSize: 30,
-  },
-  inputSZ : {
-    height: 120,
-    width: 280,
     fontSize: 25,
+    ...Platform.select({
+      ios: {
+        
+      },
+      android: {
+         padding: 10,
+      }
+    }),
   },
+
+  textInputSC : {
+    ...Platform.select({
+      ios: {
+        fontSize: 25,
+        flex:4,
+      },
+      android: {
+        flex: 5,
+      }
+    }),
+  },
+
+  pickerSC : {
+    ...Platform.select({
+      ios: {
+        
+      },
+      android: {
+      }
+    }),
+  },
+
+  pickerWidth : {
+    ...Platform.select({
+      ios: {
+        
+      },
+      android: {
+        width: 200,
+        alignSelf: 'center'
+      }
+    }),
+  },
+
+  cfmPicker : {
+    ...Platform.select({
+      ios: {
+        flex:1,
+        width: 70,
+        alignSelf: 'center'
+      },
+      android: {
+        flex: 2,
+        alignSelf: 'center'
+      }
+    }),
+  }
 });
