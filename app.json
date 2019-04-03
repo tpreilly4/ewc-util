@@ -8,7 +8,7 @@
       "ios",
       "android"
     ],
-    "version": "1.0.0",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -27,7 +27,8 @@
       "bundleIdentifier": "com.ewccontrols.mobile.ios"
     },
     "android": {
-      "package": "com.ewccontrols.mobile"
+      "package": "com.ewccontrols.mobile",
+      "versionCode": 2
     }
   }
 }

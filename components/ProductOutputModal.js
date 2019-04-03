@@ -8,6 +8,9 @@ export default class ProductOutputModal extends Component {
     const {product} = this.props;
 
     console.log(product);
+    
+    //we want ncm300 to come up first.
+    product.reverse();
 
     //panel objects do not have a size. Make sure we don't try to render a size text view if it doesn't exist
     const size = product[0].size ? product[0].size : 0;
@@ -17,8 +20,6 @@ export default class ProductOutputModal extends Component {
     if(size){
       sizeView = <Text style={styles.sizeText}>Size: {size}</Text>;
     }
-
-
 
     //const img = product.imgURL;
     //const desc = product.description;

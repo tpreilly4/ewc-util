@@ -14,7 +14,7 @@ class BypassCalculatorScreen extends Component {
     super(props);
     this.state = { 
       sc_input: '',
-      sc_units: '1',
+      // sc_units: '1',
       sz_input: '',
       dl_input: '',
       or_input: '',
@@ -35,7 +35,7 @@ class BypassCalculatorScreen extends Component {
     const maxAirflowRectBypass = 3000;
 
     const userInput = {
-      systemCapacity: +this.state.sc_input * +this.state.sc_units,
+      systemCapacity: +this.state.sc_input /* * +this.state.sc_units */,
       smallestZone: +this.state.sz_input,
       damperLeakage: +this.state.dl_input,
       openRun: +this.state.or_input,
@@ -269,16 +269,15 @@ class BypassCalculatorScreen extends Component {
               <ProductOutputModal product={this.state.bypassOutput} exitOnPress ={() => {this.toggleModal(!this.state.modalVisible)}}/>
           </Modal>          
           <PanelViewContainer title="System Capacity"text={APP_STRINGS.STRING_BPCSCREEN_SYSCAP}>
-          <View style={styles.inputContainerSC}>
             <TextInput
-                style={[styles.inputTextSC, styles.textInputSC]}
+                style={styles.input}
                 onChangeText={(sc_input) => this.setState({sc_input})}
                 value={this.state.sc_input}
                 keyboardType='numeric'
                 placeholder='Enter System Capacity...'
                 placeholderTextColor='#0033ff'
               />
-              <View style={styles.cfmPicker}>
+              {/* <View style={styles.cfmPicker}>
               <Picker
                 style={styles.pickerSC} itemStyle={{height: 120, color: '#0033ff'}} mode = 'dropdown'
                 selectedValue={this.state.sc_units}
@@ -286,8 +285,7 @@ class BypassCalculatorScreen extends Component {
                 <Picker.Item label="CFM" value='1' />
                 <Picker.Item label="Tons" value='400' />
               </Picker>
-              </View>
-            </View>
+              </View> */}
           </PanelViewContainer>
           <PanelViewContainer title="Smallest Zone"text={APP_STRINGS.STRING_BPCSCREEN_SMALLESTZONE}>
             <TextInput
