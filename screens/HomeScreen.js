@@ -71,7 +71,7 @@ class HomeScreen extends Component {
         {
           id: 5,
           title:"Bypass Dampers",
-          onPress:()=>{this.props.navigation.navigate('BypassCalculator')},
+          onPress:()=>Linking.openURL('https://ewccontrols.com/by-pass-dampers/'),
         },
       ];
 

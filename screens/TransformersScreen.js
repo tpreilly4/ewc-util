@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SafeAreaView, StyleSheet, ImageBackground, ScrollView, Image, View, Text} from 'react-native';
+import { SafeAreaView, StyleSheet, ImageBackground, ScrollView, Image, View, Text, Linking} from 'react-native';
 import Disclaimer from '../components/Disclaimer';
 import productImages from '../images/index';
 import APP_STRINGS from '../strings';

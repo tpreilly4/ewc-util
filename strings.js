@@ -5,7 +5,7 @@ const APP_STRINGS = {
     STRING_MANUAL_HOMESCREEN : 'See our web page to sort through our product manuals sorted alphabetically.',
     STRING_DISCLAIMER_HOMESCREEN : "This application is intended for informational purposes only. All load calculations and Manual D and J should be performed on each and every installation.",
 
-    STRING_BPCSCREEN_SYSCAP:"Enter the total system capacity. Be sure to specify whether your input is in 'Tons' or 'CFM'.",
+    STRING_BPCSCREEN_SYSCAP:"Enter the total system capacity (CFM).",
     STRING_BPCSCREEN_SMALLESTZONE:"Enter the size (CFM) of the smallest zone.",
     STRING_BPCSCREEN_DAMPERLEAKAGE:'If applicable, enter the amount (CFM) of airflow you are leaking.\n\nPress the info button for more information.',
     STRING_BPCSCREEN_OPENRUN:'If applicable, enter the size (CFM) of the open run.\n\nPress the info button for more information.',

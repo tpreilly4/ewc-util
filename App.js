@@ -20,6 +20,7 @@ import ContactUsScreen from './screens/ContactUsScreen';
 import LearnMoreScreen from './screens/LearnMoreScreen';
 import DuctDesignScreen from './screens/DuctDesignScreen';
 import TransformersScreen from './screens/TransformersScreen';
+import BypassDampersScreen from './screens/BypassDampersScreen';
 
 const win = Dimensions.get('window');
 
@@ -116,6 +117,16 @@ const AppNavigator = createStackNavigator({
     screen: TransformersScreen,
     navigationOptions: () => ({
       title: `Transformers`,
+      headerTintColor: 'white',
+      headerStyle: {
+        backgroundColor: '#0033ff',
+      },
+    }),
+  },
+  BypassDampers:{
+    screen: BypassDampersScreen,
+    navigationOptions: () => ({
+      title: `Bypass Dampers`,
       headerTintColor: 'white',
       headerStyle: {
         backgroundColor: '#0033ff',

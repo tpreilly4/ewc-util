@@ -72,6 +72,10 @@ class BypassCalculatorScreen extends Component {
           onPress:()=>{this.props.navigation.navigate('LearnMore')}
         },
         {
+          text: 'Call Tech Support',
+          onPress:()=>Linking.openURL(`tel:${18004463110}`),
+        },
+        {
           text: 'Go Back',
           onPress: () => console.log('Cancel Pressed'),
           style: 'cancel',
@@ -190,7 +194,7 @@ class BypassCalculatorScreen extends Component {
             {
               key: 2,
               title:"Technical Bulletin (en Español)",
-              onPress: ()=>Linking.openURL('https://www.ewccontrols.com/acrobat/090377a0140.pdf')
+              onPress: ()=>Linking.openURL('https://ewccontrols.com/acrobat/090375a0253.pdf')
             },
           ],
         },];
